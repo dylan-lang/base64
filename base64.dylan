@@ -58,15 +58,15 @@ define function base64-encode
       when (sidx + n < string.size)
         let char-code :: <integer> = as(<integer>, string[sidx + n]);
         value := logior(value, logand(#xFF, char-code));
-        inc!(chars);
+        chars := chars + 1;
       end;
       when (n = 1)
         value := ash(value, 8);
       end;
     end;
-    result[didx + 3] := encoding-vector[iff(chars > 3, logand(value, #x3F), 64)];
+    result[didx + 3] := encoding-vector[if (chars > 3) logand(value, #x3F) else 64 end];
     value := ash(value, -6);
-    result[didx + 2] := encoding-vector[iff(chars > 2, logand(value, #x3F), 64)];
+    result[didx + 2] := encoding-vector[if (chars > 2) logand(value, #x3F) else 64 end];
     value := ash(value, -6);
     result[didx + 1] := encoding-vector[logand(value, #x3F)];
     value := ash(value, -6);
@@ -92,15 +92,15 @@ define function base64-decode
       let value = decoding-vector[as(<integer>, char)];
       unless (value == -1 | value == 64)
         bitstore := logior(ash(bitstore, 6), value);
-        inc!(bitcount, 6);
+        bitcount := bitcount + 6;
         when (bitcount >= 8)
-          dec!(bitcount, 8);
+          bitcount := bitcount - 8;
           let code = logand(ash(bitstore, 0 - bitcount), #xFF);
           if (zero?(code))
             exit-block();
           else
             result[ridx] := as(<byte-character>, code);
-            inc!(ridx);
+            ridx := ridx + 1;
             bitstore := logand(bitstore, #xFF);
           end;
         end;
