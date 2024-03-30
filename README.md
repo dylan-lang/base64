@@ -1,4 +1,5 @@
 # Base64
+[![build-and-test](https://github.com/dylan-lang/base64/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/dylan-lang/base64/actions/workflows/build-and-test.yml)
 
 Base64 implementation for Dylan
 
