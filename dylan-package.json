@@ -1,0 +1,13 @@
+{
+    "category": "encoding",
+    "contact": "dylan-lang@googlegroups.com",
+    "dependencies": [  ],
+    "dev-dependencies": [ "testworks" ],
+    "description": "Base64 encoding",
+    "name": "base64",
+    "version": "0.1.1",
+    "url": "https://github.com/dylan-lang/base64",
+    "keywords": [ "base64", "binary" ],
+    "license": "Unlicensed",
+    "license-url": "http://unlicense.org/"
+}
