@@ -15,9 +15,9 @@ by Borensten & Freed, September 1993.
 
 This library exports two functions
 
-- `base-64-encode (string) => (string)` and
+- `base64-encode (string) => (string)` and
 
-- `base-64-decode (string) => (string)`
+- `base64-decode (string) => (string)`
 
 ## Types of encoding
 
