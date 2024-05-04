@@ -1,11 +1,14 @@
 {
+    "name": "base64",
+    "version": "0.2.0",
+    "description": "Base-64 encoding/decoding",
     "category": "encoding",
     "contact": "dylan-lang@googlegroups.com",
     "dependencies": [  ],
-    "dev-dependencies": [ "testworks" ],
-    "description": "Base64 encoding",
-    "name": "base64",
-    "version": "0.1.1",
+    "dev-dependencies": [
+        "sphinx-extensions",
+        "testworks"
+    ],
     "url": "https://github.com/dylan-lang/base64",
     "keywords": [ "base64", "binary" ],
     "license": "Unlicensed",
