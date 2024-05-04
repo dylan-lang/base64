@@ -10,14 +10,14 @@ See also :doc:`reference`
 Quickstart
 ----------
 
-Add ``use base64;`` to both your library file.
+Add ``use base64;`` to your library and module definitions.
 
-This library exports two functions
+This library exports two functions:
 
--  :func:`base64-encode` and
+-  :func:`base64-encode`
 -  :func:`base64-decode`
 
-that accept a :drm:`<byte-string>` and returns a :drm:`<byte-string>`.
+Both functions accept a :drm:`<byte-string>` and return a :drm:`<byte-string>`.
 
 Types of encoding
 -----------------
@@ -28,8 +28,8 @@ The functions have two types of encoding/decoding:
 
 -  ``#"http"``
 
-The main difference between them are the padding characters used. You
-can choose the type with the key parameter ``encoding:`` (see example
+The main difference between them is the padding characters used. You
+can choose the type with the ``encoding:`` parameter (see example
 below).
 
 Example
@@ -62,7 +62,7 @@ Here is an example of usage of the standard encoding/decoding:
 HTTP encoding/decoding
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To show the http encoding/decoding we will use a text that forces the
+To show the HTTP encoding/decoding we will use a text that forces the
 padding (base64 encoding uses padding to ensure that the length of the
 encoded string is a multiple of 4 bytes).
 
