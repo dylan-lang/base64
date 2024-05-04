@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Base64 library" href="reference.html" /><link rel="prev" title="Base64" href="index.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
-        <title>Usage - base64 0.1.1 documentation</title>
+        <title>Usage - base64 0.2.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">base64 0.1.1 documentation</div></a>
+      <a href="index.html"><div class="brand">base64 0.2.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">base64 0.1.1 documentation</span>
+  <span class="sidebar-brand-text">base64 0.2.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -197,13 +197,13 @@
 <p>See also <a class="reference internal" href="reference.html"><span class="doc">Base64 library</span></a></p>
 <section id="quickstart">
 <h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h2>
-<p>Add <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">base64;</span></code> to both your library file.</p>
-<p>This library exports two functions</p>
+<p>Add <code class="docutils literal notranslate"><span class="pre">use</span> <span class="pre">base64;</span></code> to your library and module definitions.</p>
+<p>This library exports two functions:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="reference.html#base64:base64:base64-encode"><code class="xref dylan dylan-func docutils literal notranslate"><span class="pre">base64-encode</span></code></a> and</p></li>
+<li><p><a class="reference internal" href="reference.html#base64:base64:base64-encode"><code class="xref dylan dylan-func docutils literal notranslate"><span class="pre">base64-encode</span></code></a></p></li>
 <li><p><a class="reference internal" href="reference.html#base64:base64:base64-decode"><code class="xref dylan dylan-func docutils literal notranslate"><span class="pre">base64-decode</span></code></a></p></li>
 </ul>
-<p>that accept a <a class="reference external" href="https://opendylan.org/books/drm/Collection_Classes#byte-string"><code class="xref drm docutils literal notranslate"><span class="pre">&lt;byte-string&gt;</span></code></a> and returns a <a class="reference external" href="https://opendylan.org/books/drm/Collection_Classes#byte-string"><code class="xref drm docutils literal notranslate"><span class="pre">&lt;byte-string&gt;</span></code></a>.</p>
+<p>Both functions accept a <a class="reference external" href="https://opendylan.org/books/drm/Collection_Classes#byte-string"><code class="xref drm docutils literal notranslate"><span class="pre">&lt;byte-string&gt;</span></code></a> and return a <a class="reference external" href="https://opendylan.org/books/drm/Collection_Classes#byte-string"><code class="xref drm docutils literal notranslate"><span class="pre">&lt;byte-string&gt;</span></code></a>.</p>
 </section>
 <section id="types-of-encoding">
 <h2>Types of encoding<a class="headerlink" href="#types-of-encoding" title="Permalink to this heading">#</a></h2>
@@ -212,8 +212,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">#&quot;standard&quot;</span></code> (default) and</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#&quot;http&quot;</span></code></p></li>
 </ul>
-<p>The main difference between them are the padding characters used. You
-can choose the type with the key parameter <code class="docutils literal notranslate"><span class="pre">encoding:</span></code> (see example
+<p>The main difference between them is the padding characters used. You
+can choose the type with the <code class="docutils literal notranslate"><span class="pre">encoding:</span></code> parameter (see example
 below).</p>
 </section>
 <section id="example">
@@ -242,7 +242,7 @@ below).</p>
 </section>
 <section id="http-encoding-decoding">
 <h3>HTTP encoding/decoding<a class="headerlink" href="#http-encoding-decoding" title="Permalink to this heading">#</a></h3>
-<p>To show the http encoding/decoding we will use a text that forces the
+<p>To show the HTTP encoding/decoding we will use a text that forces the
 padding (base64 encoding uses padding to ensure that the length of the
 encoded string is a multiple of 4 bytes).</p>
 <div class="highlight-dylan notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example string to encode, note the missing dot at the end</span>
@@ -341,7 +341,7 @@ encoded string is a multiple of 4 bytes).</p>
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=87f11076"></script>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b1f64a84"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/scripts/furo.js?v=32e29ea5"></script>
