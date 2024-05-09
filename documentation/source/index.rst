@@ -3,6 +3,7 @@ Base64
 
 .. toctree::
    :maxdepth: 3
+   :hidden:
 
    usage
    reference
@@ -15,8 +16,6 @@ defined in `RFC 1521 <https://datatracker.ietf.org/doc/html/rfc1521>`__
 by Borensten & Freed, September 1993.
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
