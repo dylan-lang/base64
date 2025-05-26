@@ -1,21 +1,22 @@
 Module:    dylan-user
-Synopsis:  Base64 encoding/decoding
-Author:    Carl Gay
+Synopsis:  Base64 encoding/decoding as defined in RFC 4648
 License:   This code is in the public domain
 Warranty:  Distributed WITHOUT WARRANTY OF ANY KIND
 
 define library base64
-  use dylan;
   use common-dylan;
+
   export base64;
-end;
+end library;
 
 define module base64
-  use dylan;
-  use dylan-extensions, import: { <byte-character>, when };
+  use byte-vector;
+  use common-dylan;
+
   export
     base64-encode,
-    base64-decode;
-end;
-
-
+    base64-decode,
+    <scheme>,
+    $standard-scheme,
+    $url-scheme;
+end module;
