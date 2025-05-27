@@ -1,6 +1,6 @@
 {
     "name": "base64",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "description": "Base-64 encoding/decoding",
     "category": "encoding",
     "contact": "dylan-lang@googlegroups.com",
