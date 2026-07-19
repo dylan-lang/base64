@@ -11,22 +11,24 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v7
 
-      - name: Install Opendylan
+      - name: Install Open Dylan
         uses: dylan-lang/install-opendylan@v3
 
-      - name: Download dependencies
-        run: dylan update
+      - name: Install Dependencies
+        run: deft update
 
-      - name: Build tests
-        run: dylan build base64-test-suite
-
-      - name: Run tests
-        run: _build/bin/base64-test-suite --progress none --report surefire > _build/TEST-base64.xml
+      - name: Build and Run Tests
+        run: |
+          mkdir -p _build  # can't redirect without it
+          deft test -- --progress none --report surefire > _build/TEST-base64.xml
 
       - name: Publish Test Report
         if: success() || failure()
