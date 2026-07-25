@@ -16,22 +16,20 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest]
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v7
 
       - name: Install Open Dylan
         uses: dylan-lang/install-opendylan@v3
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: deft update
 
       - name: Build and Run Tests
-        run: |
-          mkdir -p _build  # can't redirect without it
-          deft test -- --progress none --report surefire > _build/TEST-base64.xml
+        run: deft test -- --report surefire --report-file _build/test-output.xml
 
       - name: Publish Test Report
         if: success() || failure()
         uses: mikepenz/action-junit-report@v6
         with:
-          report_paths: '**/_build/TEST-*.xml'
+          report_paths: '**/_build/test-output.xml'
